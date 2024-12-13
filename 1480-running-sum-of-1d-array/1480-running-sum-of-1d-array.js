@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
+/* 1st try: Overcomplicated it lol
 var runningSum = function(nums) {
     newNums = [];
     
@@ -20,4 +22,13 @@ var runningSum = function(nums) {
     };
     
     return newNums;
+};
+*/
+
+var runningSum = function(nums) {
+    for (let i = 1; i < nums.length; i++){
+        nums[i] += nums[i-1]
+    };
+    
+    return nums
 };
