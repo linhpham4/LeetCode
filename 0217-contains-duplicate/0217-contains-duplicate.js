@@ -1,7 +1,9 @@
 /**
  * @param {number[]} nums
  * @return {boolean}
-
+*/
+/*
+DOUBLE LOOP----------------------------------------------------------
 Input: Array
 Output: Boolean
 
@@ -39,6 +41,7 @@ Space: O(1)
 // };
 
 /*
+SORT()-----------------------------------------------------------
 Sort array and compare elements to the one next to it
 
 function(array) {
@@ -48,13 +51,30 @@ function(array) {
             return true
         else move to the next index
 }
+
+Time: O(nlogn)
+Space: O(1)
+*/
+// var containsDuplicate = function(nums) {
+//     nums.sort((a,b) => a - b);
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === nums[i+1]) {
+//             return true;
+//         };
+//     };
+//     return false;
+// };
+
+/*
+HASH SET------------------------------
+Create a set from the array
+If length of array is longer than set = return true
+Else return false
 */
 var containsDuplicate = function(nums) {
-    nums.sort((a,b) => a - b);
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === nums[i+1]) {
-            return true;
-        };
+    const numSet = new Set(nums)
+    if (nums.length > numSet.size) {
+        return true;
     };
     return false;
-};
+}
