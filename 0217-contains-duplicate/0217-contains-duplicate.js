@@ -66,15 +66,44 @@ Space: O(1)
 // };
 
 /*
-HASH SET------------------------------
+HASH SET LENGTH------------------------------------------------------
 Create a set from the array
 If length of array is longer than set = return true
 Else return false
+
+Time: O(n)
+Space: O(n)
+*/
+// var containsDuplicate = function(nums) {
+//     const numSet = new Set(nums)
+//     if (nums.length > numSet.size) {
+//         return true;
+//     };
+//     return false;
+// }
+//OR
+// var containsDuplicate = function(nums) {
+//     return new Set(nums).size < nums.length;
+// }
+
+/*
+HASH SET ------------------------------------------------------
+Create new empty set
+Add each element of array one by one
+Check if element is already added to the set
+    If already seen = return true
+    Else add to set
+
+Time: O(n)
+Space: O(n)
 */
 var containsDuplicate = function(nums) {
-    const numSet = new Set(nums)
-    if (nums.length > numSet.size) {
-        return true;
+    const numSet = new Set();
+    for (const num of nums) {
+        if (numSet.has(num)) {
+            return true;
+        };
+        numSet.add(num);
     };
     return false;
 }
