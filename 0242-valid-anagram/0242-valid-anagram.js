@@ -116,26 +116,42 @@ Check if length of strings are equal
 Iterate through strings to create hash tables {character: count}
 Iterate through strings to check that hash tables contain all the same key-value pairs
 
-Time: O()
+Time: O(n+m)
+Space: O(1)
  */
+// var isAnagram = function(s, t) {
+//     if (s.length !== t.length) {
+//             return false;
+//     }
+
+//     const hashS = {};
+//     const hashT = {};
+
+//     for (let i = 0; i < s.length; i++) {
+//         hashS[s[i]] = (hashS[s[i]] || 0) + 1;
+//         hashT[t[i]] = (hashT[t[i]] || 0) + 1;
+//     }
+
+//     for (const key in hashS) {
+//         if (hashS[key] !== hashT[key]) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// };
+
+/*
+Check that s and t are the same length
+Split string, sort, then join
+Compare sorted strings
+
+Time: O(nlogn + mlogm)
+Space: O(1)
+*/
 var isAnagram = function(s, t) {
-    if (s.length !== t.length) {
-            return false;
-    }
+    const sortedS = s.split("").sort().join("")
+    const sortedT = t.split("").sort().join("")
 
-    const hashS = {};
-    const hashT = {};
-
-    for (let i = 0; i < s.length; i++) {
-        hashS[s[i]] = (hashS[s[i]] || 0) + 1;
-        hashT[t[i]] = (hashT[t[i]] || 0) + 1;
-    }
-
-    for (const key in hashS) {
-        if (hashS[key] !== hashT[key]) {
-            return false;
-        }
-    }
-
-    return true;
-};
+    return sortedS === sortedT;
+}
