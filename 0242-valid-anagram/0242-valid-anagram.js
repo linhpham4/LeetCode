@@ -128,8 +128,8 @@ Space: O(1)
 //     const hashT = {};
 
 //     for (let i = 0; i < s.length; i++) {
-//         hashS[s[i]] = (hashS[s[i]] || 0) + 1;
-//         hashT[t[i]] = (hashT[t[i]] || 0) + 1;
+//         hashS[s[i]] = hashS[s[i]] ? hashS[s[i]]++ : 1;
+//         hashT[t[i]] = hashT[t[i]] ? hashT[t[i]]++ : 1;
 //     }
 
 //     for (const key in hashS) {
@@ -147,11 +147,36 @@ Split string, sort, then join
 Compare sorted strings
 
 Time: O(nlogn + mlogm)
+Space: O(n+m)
+*/
+// var isAnagram = function(s, t) {
+//     const sortedS = s.split("").sort().join("")
+//     const sortedT = t.split("").sort().join("")
+
+//     return sortedS === sortedT;
+// }
+
+/*
+Check if length of s and t are equal
+Create new array of size 26 and fill in each element with value 0
+Iterate through s, increment the count of each unique character
+Iterate through t, decrement the count of each unique character
+Check that each element in array is 0
+
+Time: O(n+m)
 Space: O(1)
 */
 var isAnagram = function(s, t) {
-    const sortedS = s.split("").sort().join("")
-    const sortedT = t.split("").sort().join("")
+    if (s.length !== t.length) {
+        return false;
+    }
 
-    return sortedS === sortedT;
+    const count = new Array(26).fill(0);
+
+    for (let i = 0; i < s.length; i++) {
+        count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
+        count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
+    }
+
+    return count.every((value) => value === 0);
 }
