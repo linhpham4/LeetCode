@@ -19,13 +19,36 @@ return [i,j] sorted in ascending order
 Time: O(n^2)
 Space: O(1)
  */
+// var twoSum = function(nums, target) {
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] === target) {
+//                 return [i, j];
+//             }
+//         }
+//     }
+//     return [];
+// };
+
+/*
+Create empty hashmap
+Iterate through array to add key-value pair for each element {value: index}
+Iterate through array to subtract element from target to find the difference
+Check if integer of that value exists in hashmap and is not the current index being iterated over
+If true, return indicies
+*/
 var twoSum = function(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                return [i, j];
+    const indicies = {};
+
+        for (let i = 0; i < nums.length; i++) {
+            indicies[nums[i]] = i;
+        }
+
+        for (let i = 0; i < nums.length; i++) {
+            const diff = target - nums[i]
+            if (indicies[diff] && indicies[diff] !== i) {
+                return [i, indicies[diff]];
             }
         }
-    }
-    return [];
-};
+        return [];
+}
