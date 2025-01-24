@@ -119,7 +119,7 @@ var twoSum = function(nums, target) {
         let sum = sorted[left][0] + sorted[right][0];
 
         if (sum === target) {
-            return [sorted[left][1], sorted[right][1]]
+            return [Math.min(sorted[left][1], sorted[right][1]), Math.max(sorted[left][1], sorted[right][1])] //Need min and max to determine order of ORIGINAL indicies
         } else if (sum > target) {
             right--;
         } else {
