@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 |  |
 | ------- |
+| [0125-valid-palindrome](https://github.com/linhpham4/LeetCode/tree/master/0125-valid-palindrome) |
 | [0242-valid-anagram](https://github.com/linhpham4/LeetCode/tree/master/0242-valid-anagram) |
 | [0412-fizz-buzz](https://github.com/linhpham4/LeetCode/tree/master/0412-fizz-buzz) |
 ## Simulation
@@ -37,4 +38,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0217-contains-duplicate](https://github.com/linhpham4/LeetCode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/linhpham4/LeetCode/tree/master/0242-valid-anagram) |
+## Two Pointers
+|  |
+| ------- |
+| [0125-valid-palindrome](https://github.com/linhpham4/LeetCode/tree/master/0125-valid-palindrome) |
 <!---LeetCode Topics End-->
