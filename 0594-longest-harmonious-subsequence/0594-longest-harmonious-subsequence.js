@@ -43,23 +43,44 @@ Time: O(2n)
 Space: O(n)
  */
 
+// var findLHS = function(nums) {
+//     nums.sort((a, b) => a - b);
+
+//     let left = 0, right = 1, maxLength = 0;
+
+//     while (right < nums.length) {
+//         let diff = nums[right] - nums[left];
+
+//         if (diff === 1) {
+//             maxLength = Math.max(maxLength, right - left + 1);
+//             right++;
+//         } else if (diff < 1) {
+//             right++;
+//         } else {
+//             left++;
+//         }
+//     }
+
+//     return maxLength;
+// };
+
 var findLHS = function(nums) {
-    nums.sort((a, b) => a - b);
+    let count = new Map();
+    let maxLength = 0;
 
-    let left = 0, right = 1, maxLength = 0;
-
-    while (right < nums.length) {
-        let diff = nums[right] - nums[left];
-        
-        if (diff === 1) {
-            maxLength = Math.max(maxLength, right - left + 1);
-            right++;
-        } else if (diff < 1) {
-            right++;
+    for (const num of nums) {
+        if (count.has(num)) {
+            count.set(num, count.get(num)+1);
         } else {
-            left++;
+            count.set(num, 1);
+        }
+    }
+
+    for (const [key, value] of count) {
+        if (count.has(key+1)) {
+            maxLength = Math.max(maxLength, value + count.get(key+1));
         }
     }
 
     return maxLength;
-};
+}
