@@ -31,6 +31,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0217-contains-duplicate](https://github.com/linhpham4/LeetCode/tree/master/0217-contains-duplicate) |
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0643-maximum-average-subarray-i](https://github.com/linhpham4/LeetCode/tree/master/0643-maximum-average-subarray-i) |
+| [0792-binary-search](https://github.com/linhpham4/LeetCode/tree/master/0792-binary-search) |
 ## Hash Table
 |  |
 | ------- |
@@ -65,4 +66,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
+## Binary Search
+|  |
+| ------- |
+| [0792-binary-search](https://github.com/linhpham4/LeetCode/tree/master/0792-binary-search) |
 <!---LeetCode Topics End-->
