@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0643-maximum-average-subarray-i](https://github.com/linhpham4/LeetCode/tree/master/0643-maximum-average-subarray-i) |
 | [0792-binary-search](https://github.com/linhpham4/LeetCode/tree/master/0792-binary-search) |
+| [1127-last-stone-weight](https://github.com/linhpham4/LeetCode/tree/master/1127-last-stone-weight) |
 ## Hash Table
 |  |
 | ------- |
@@ -70,4 +71,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0792-binary-search](https://github.com/linhpham4/LeetCode/tree/master/0792-binary-search) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [1127-last-stone-weight](https://github.com/linhpham4/LeetCode/tree/master/1127-last-stone-weight) |
 <!---LeetCode Topics End-->
