@@ -81,6 +81,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0110-balanced-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0110-balanced-binary-tree) |
+| [0226-invert-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/linhpham4/LeetCode/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Design
 |  |
@@ -95,6 +96,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0110-balanced-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0110-balanced-binary-tree) |
+| [0226-invert-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/linhpham4/LeetCode/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Data Stream
 |  |
@@ -105,8 +107,10 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0110-balanced-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0110-balanced-binary-tree) |
+| [0226-invert-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0226-invert-binary-tree) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0226-invert-binary-tree](https://github.com/linhpham4/LeetCode/tree/master/0226-invert-binary-tree) |
 <!---LeetCode Topics End-->
