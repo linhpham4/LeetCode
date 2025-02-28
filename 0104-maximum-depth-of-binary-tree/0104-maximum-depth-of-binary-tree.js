@@ -47,6 +47,9 @@ var maxDepth = function(root) {
     return (1 + Math.max(maxDepth(root.left), maxDepth(root.right)));
 };
 */
+/*
+O(n^2) Solution---------
+
 var maxDepth = function(root) {
     const queue = [];
     let depth = 0;
@@ -59,6 +62,34 @@ var maxDepth = function(root) {
         const currentLength = queue.length;
         for (let i = 0; i < currentLength; i++) {
             const currentNode = queue.shift();
+
+            if(currentNode.left !== null) {
+                queue.push(currentNode.left);
+            }
+
+            if(currentNode.right !== null) {
+                queue.push(currentNode.right);
+            }
+        }
+        depth++;
+    }
+    return depth;
+}
+*/
+var maxDepth = function(root) {
+    const queue = [];
+    let depth = 0;
+    let frontIndex = 0;
+
+    if (root !== null) {
+        queue.push(root);
+    }
+
+    while(frontIndex < queue.length) {
+        const currentLength = queue.length - frontIndex;
+        for (let i = 0; i < currentLength; i++) {
+            const currentNode = queue[frontIndex];
+            frontIndex++;
 
             if(currentNode.left !== null) {
                 queue.push(currentNode.left);
