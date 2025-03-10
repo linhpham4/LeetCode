@@ -21,7 +21,7 @@ DFS--------
 Compare node at the same position in both trees. If values are the same, compare children iteratively. 
 
 Time: O(n) >>> Worse case is both trees are the same n+n = 2n = n
-Space: O(n) >>> Call stack of function call on each node
+Space: O(n) >>> Call stack that is size of the height of binary tree, in the worst case the tree is degenerate and height is n nodes in tree
 
 BFS------
 Compare trees at each level before moving to the next.
@@ -43,19 +43,13 @@ Base case (checking the last node in the tree)
  * @param {TreeNode} q
  * @return {boolean}
  */
+
+/* 
 var isSameTree = function(p, q) {
-    // console.log(p.left, q.left)
-    // console.log(p.right, q.right)
-    // if (p == null && q == null) {
-    //     return true;
-    // } 
     if (!p && !q) {
         return true;
     } 
     
-    // if ((p == null || q == null) || p.val !== q.val) {
-    //     return false;
-    // }
     if ((!p || !q) || p.val !== q.val) {
         // console.log(p.val, q.val)
         return false;
@@ -63,3 +57,64 @@ var isSameTree = function(p, q) {
 
     return (isSameTree(p.left, q.left) && isSameTree(p.right, q.right)) ;
 };
+*/
+
+// var isSameTree = function(p, q) {
+//     const pQueue = [];
+//     pQueue.push(p);
+//     let pFront = 0;
+//     let pEnd = pQueue.length - 1;
+
+//     const qQueue = [];
+//     qQueue.push(q);
+//     let qFront = 0;
+//     let qEnd = qQueue.length - 1;
+    
+
+//     while (pFront < pEnd && qFront < qEnd) {
+//         const pCurrentLength = pQueue.length - pFront;
+//         // const qCurrentLength = qQueue.length - qFront;
+
+//         for (let i = 0; i < pCurrentLength, i++) {
+//             const pCurrentNode = pQueue[pFront];
+//             pFront++;
+
+//             if(pCurrentNode.left !== null) {
+//                 pQueue.push(pCurrentNode.left);
+//             }
+
+//             if(pCurrentNode.right !== null) {
+//                 pQueue.push(pCurrentNode.right);
+//             }
+//         }
+//         queue.push(p.left, q.left)
+//     }
+
+
+// }
+
+var isSameTree = function(p, q) {
+    const q1 = [];
+        const q2 = [];
+        q1.push(p);
+        q2.push(q);
+        
+        while (q1.length !== 0 && q2.length !== 0) {
+            for (let i = q1.length; i > 0; i--) {
+                let nodeP = q1.pop();
+                let nodeQ = q2.pop();
+
+                if (nodeP === null && nodeQ === null) continue;
+                if (nodeP === null || nodeQ === null || nodeP.val !== nodeQ.val) {
+                    return false;
+                }
+                
+                q1.push(nodeP.left);
+                q1.push(nodeP.right);
+                q2.push(nodeQ.left);
+                q2.push(nodeQ.right);
+            }
+        }
+
+        return true;
+    }
