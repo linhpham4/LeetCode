@@ -119,27 +119,6 @@ Iterate through strings to check that hash tables contain all the same key-value
 Time: O(n+m)
 Space: O(1)
  */
-// var isAnagram = function(s, t) {
-//     if (s.length !== t.length) {
-//             return false;
-//     }
-
-//     const hashS = {};
-//     const hashT = {};
-
-//     for (let i = 0; i < s.length; i++) {
-//         hashS[s[i]] = hashS[s[i]] ? hashS[s[i]]++ : 1;
-//         hashT[t[i]] = hashT[t[i]] ? hashT[t[i]]++ : 1;
-//     }
-
-//     for (const key in hashS) {
-//         if (hashS[key] !== hashT[key]) {
-//             return false;
-//         }
-//     }
-
-//     return true;
-// };
 
 /*
 Check that s and t are the same length
@@ -150,6 +129,9 @@ Time: O(nlogn + mlogm)
 Space: O(n+m)
 */
 // var isAnagram = function(s, t) {
+//      if (s.length !== t.length) {
+//             return false;
+//     }
 //     const sortedS = s.split("").sort().join("")
 //     const sortedT = t.split("").sort().join("")
 
@@ -166,6 +148,7 @@ Check that each element in array is 0
 Time: O(n+m)
 Space: O(1)
 */
+/*
 var isAnagram = function(s, t) {
     if (s.length !== t.length) {
         return false;
@@ -179,4 +162,26 @@ var isAnagram = function(s, t) {
     }
 
     return count.every((value) => value === 0);
+}
+*/
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) {
+        return false;
+    }
+
+    const sCount = {};
+    const tCount = {};
+
+    for (let i = 0; i < s.length; i++) {
+        sCount[s[i]] = (sCount[s[i]] || 0) + 1;
+        tCount[t[i]] = (tCount[t[i]] || 0) + 1;
+    }
+
+    for (const letter in sCount) {
+        if (sCount[letter] !== tCount[letter]) {
+            return false;
+        }
+    }
+
+    return true;
 }
