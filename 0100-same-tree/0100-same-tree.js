@@ -59,62 +59,30 @@ var isSameTree = function(p, q) {
 };
 */
 
-// var isSameTree = function(p, q) {
-//     const pQueue = [];
-//     pQueue.push(p);
-//     let pFront = 0;
-//     let pEnd = pQueue.length - 1;
-
-//     const qQueue = [];
-//     qQueue.push(q);
-//     let qFront = 0;
-//     let qEnd = qQueue.length - 1;
-    
-
-//     while (pFront < pEnd && qFront < qEnd) {
-//         const pCurrentLength = pQueue.length - pFront;
-//         // const qCurrentLength = qQueue.length - qFront;
-
-//         for (let i = 0; i < pCurrentLength, i++) {
-//             const pCurrentNode = pQueue[pFront];
-//             pFront++;
-
-//             if(pCurrentNode.left !== null) {
-//                 pQueue.push(pCurrentNode.left);
-//             }
-
-//             if(pCurrentNode.right !== null) {
-//                 pQueue.push(pCurrentNode.right);
-//             }
-//         }
-//         queue.push(p.left, q.left)
-//     }
-
-
-// }
-
 var isSameTree = function(p, q) {
-    const q1 = [];
-        const q2 = [];
-        q1.push(p);
-        q2.push(q);
-        
-        while (q1.length !== 0 && q2.length !== 0) {
-            for (let i = q1.length; i > 0; i--) {
-                let nodeP = q1.pop();
-                let nodeQ = q2.pop();
+    const pQueue = [];
+    const qQueue = [];
+    pQueue.push(p);
+    qQueue.push(q);
 
-                if (nodeP === null && nodeQ === null) continue;
-                if (nodeP === null || nodeQ === null || nodeP.val !== nodeQ.val) {
-                    return false;
-                }
-                
-                q1.push(nodeP.left);
-                q1.push(nodeP.right);
-                q2.push(nodeQ.left);
-                q2.push(nodeQ.right);
+    while (pQueue.length !== 0 && qQueue.length !== 0) {
+        for (let i = pQueue.length; i > 0; i--) {
+            // console.log("before", pQueue, qQueue)
+            let nodeP = pQueue.pop();
+            let nodeQ = qQueue.pop();
+            // console.log("after pop", pQueue, qQueue)
+
+            if (nodeP === null && nodeQ === null) continue;
+
+            if (nodeP === null || nodeQ === null || nodeP.val !== nodeQ.val) {
+                return false;
             }
-        }
 
-        return true;
+            pQueue.push(nodeP.left);
+            pQueue.push(nodeP.right);
+            qQueue.push(nodeQ.left);
+            qQueue.push(nodeQ.right);
+        }
     }
+    return true;
+}
