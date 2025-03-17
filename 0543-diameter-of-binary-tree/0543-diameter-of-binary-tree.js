@@ -40,8 +40,12 @@ Length = number of edges btwn 2 nodes
 DFS----------
 Find bottom left leaf of both left and right subtrees. Count number of levels it takes to get back up to root node from both leaves and add them together.
 
-Time: O(n)
-Space: O(n)
+Create a variable to keep track of the max diameter (to account for unbalanced trees where the max diameter might not pass through root node). Iteratively take max height of left and right subtree and add 1 (for current level). Update max accordingly.
+
+Time: O(n) >>> Traverse through entire tree to make comparision
+Space: O(n) >>> Height of tree = amount of calls on call stack
+    - Balanced Tree: O(logn)
+    - Degenerate: O(n)
 */
 var diameterOfBinaryTree = function(root) {
     if (root == null) {
