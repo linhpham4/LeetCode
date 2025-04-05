@@ -16,18 +16,18 @@ var findReplaceString = function(s, indices, sources, targets) {
     let newS = s.split("");
 
     for (let i = 0; i < indices.length; i++) {
-        const index = indices[i]; 
-        const currSource = sources[i]; 
-        const currTarget = targets[i];
-        let startIndex = index;
+        const index = indices[i]; //2
+        const currSource = sources[i];  //"cd"
+        const currTarget = targets[i]; //"ffff"
+        let startIndex = index; //2
 
-        if (s.substring(index, index + currSource.length) === currSource) {
-            newS[index] = [currTarget];
-            let replaceAmt = currSource.length - 1;
+        if (s.substring(index, index + currSource.length) === currSource) { // "cd" === "cd"
+            newS[index] = [currTarget]; // [["eee"], "b", ["ffff"], "d"]
+            let replaceAmt = currSource.length - 1; // 1
             while (replaceAmt > 0) {
-                startIndex++;
-                newS[startIndex] = "";
-                replaceAmt--;
+                startIndex++; // 3
+                newS[startIndex] = ""; //[["eee"], "b", ["ffff"], ""]
+                replaceAmt--; // 0
             }
         }
     }
