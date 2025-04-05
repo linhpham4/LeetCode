@@ -15,6 +15,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0125-valid-palindrome](https://github.com/linhpham4/LeetCode/tree/master/0125-valid-palindrome) |
 | [0242-valid-anagram](https://github.com/linhpham4/LeetCode/tree/master/0242-valid-anagram) |
 | [0412-fizz-buzz](https://github.com/linhpham4/LeetCode/tree/master/0412-fizz-buzz) |
+| [0862-find-and-replace-in-string](https://github.com/linhpham4/LeetCode/tree/master/0862-find-and-replace-in-string) |
 ## Simulation
 |  |
 | ------- |
@@ -32,6 +33,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0643-maximum-average-subarray-i](https://github.com/linhpham4/LeetCode/tree/master/0643-maximum-average-subarray-i) |
 | [0792-binary-search](https://github.com/linhpham4/LeetCode/tree/master/0792-binary-search) |
+| [0862-find-and-replace-in-string](https://github.com/linhpham4/LeetCode/tree/master/0862-find-and-replace-in-string) |
 | [1127-last-stone-weight](https://github.com/linhpham4/LeetCode/tree/master/1127-last-stone-weight) |
 ## Hash Table
 |  |
@@ -40,12 +42,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0217-contains-duplicate](https://github.com/linhpham4/LeetCode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/linhpham4/LeetCode/tree/master/0242-valid-anagram) |
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
+| [0862-find-and-replace-in-string](https://github.com/linhpham4/LeetCode/tree/master/0862-find-and-replace-in-string) |
 ## Sorting
 |  |
 | ------- |
 | [0217-contains-duplicate](https://github.com/linhpham4/LeetCode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/linhpham4/LeetCode/tree/master/0242-valid-anagram) |
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
+| [0862-find-and-replace-in-string](https://github.com/linhpham4/LeetCode/tree/master/0862-find-and-replace-in-string) |
 ## Two Pointers
 |  |
 | ------- |
