@@ -28,6 +28,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/linhpham4/LeetCode/tree/master/0001-two-sum) |
+| [0074-search-a-2d-matrix](https://github.com/linhpham4/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/linhpham4/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0217-contains-duplicate](https://github.com/linhpham4/LeetCode/tree/master/0217-contains-duplicate) |
 | [0594-longest-harmonious-subsequence](https://github.com/linhpham4/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
@@ -74,6 +75,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Binary Search
 |  |
 | ------- |
+| [0074-search-a-2d-matrix](https://github.com/linhpham4/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0792-binary-search](https://github.com/linhpham4/LeetCode/tree/master/0792-binary-search) |
 ## Heap (Priority Queue)
 |  |
@@ -142,4 +144,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0572-subtree-of-another-tree](https://github.com/linhpham4/LeetCode/tree/master/0572-subtree-of-another-tree) |
+## Matrix
+|  |
+| ------- |
+| [0074-search-a-2d-matrix](https://github.com/linhpham4/LeetCode/tree/master/0074-search-a-2d-matrix) |
 <!---LeetCode Topics End-->
