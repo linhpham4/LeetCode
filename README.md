@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/linhpham4/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0020-valid-parentheses](https://github.com/linhpham4/LeetCode/tree/master/0020-valid-parentheses) |
 | [0125-valid-palindrome](https://github.com/linhpham4/LeetCode/tree/master/0125-valid-palindrome) |
 | [0242-valid-anagram](https://github.com/linhpham4/LeetCode/tree/master/0242-valid-anagram) |
@@ -148,4 +149,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/linhpham4/LeetCode/tree/master/0074-search-a-2d-matrix) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/linhpham4/LeetCode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
