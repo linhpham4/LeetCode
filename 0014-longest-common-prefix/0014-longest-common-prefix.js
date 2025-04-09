@@ -12,7 +12,7 @@ Create variable to keep track of possible common letters
  Iterate through the rest array to check if common prefix in those words
     - Check until difference in letters then take out difference in variable
 
- Time: O(n)
+ Time: O(n * m)
  Space: O()
  */
 // var longestCommonPrefix = function(strs) {
@@ -50,6 +50,18 @@ Create variable to keep track of possible common letters
 
 //     return commonPre.join("");
 // };
+
+/*
+Set first string as pref variable
+Create variable to keep track of pref length
+Iterate through rest of array, checking if the substring from [0, pref length] is equal to pref
+    - if not, remove the last letter of pref and decrement pref length and check again
+    - if pref length becomes zero, return ""
+If loop finishes, return pref
+
+ Time: O(n * m) where n is number of strings in arr and m is length of longest common prefix
+ Space: O(m)
+*/
 
 var longestCommonPrefix = function(strs) {
     let pref = strs[0];
